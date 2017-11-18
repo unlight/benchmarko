@@ -1,5 +1,5 @@
 {
-  "name": "node-package-starter",
+  "name": "benchmarko",
   "version": "0.0.1",
   "license": "MIT",
   "description": "Describe your project",
@@ -31,6 +31,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "benchmarkify": "^2.1.0",
     "tslib": "^1.8.0"
   },
   "devDependencies": {
@@ -58,7 +59,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/unlight/node-package-starter.git"
+    "url": "http://github.com/unlight/benchmarko.git"
   },
   "keywords": [
     "starter"
