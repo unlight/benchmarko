@@ -1,8 +1,8 @@
 import { main } from './index';
-const VERSION = require('../package.json').version;
+const { version } = require('../package.json');
 
 const argv = require('yargs')
-    .usage('Usage: $0 -f <file> -r <revisions>')
+    .usage(`Usage: benchmarko -f <file> -r <revisions>`)
     // .example('benchmarko -f benchmarks/string')
     .option('f', {
         alias: 'file',
@@ -17,7 +17,7 @@ const argv = require('yargs')
     .array('revisions')
     .help('h')
     .alias('h', 'help')
-    .version(VERSION)
+    .version(version)
     .alias('v', 'version')
     .argv;
 

@@ -10,7 +10,7 @@ npm i -D benchmarko
 USAGE
 ---
 ```
-Usage: bin -f <file> -r <revisions>
+Usage: benchmarko -f <file> -r <revisions>
 
 Options:
   -f, --file       Path to file which return test function            [required]

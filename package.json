@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "Run benchmark between revisions",
-  "bin": "lib/bin.js",
+  "bin": {
+    "benchmarko": "lib/bin.js"
+  },
   "typings": "src/index.ts",
   "scripts": {
     "test": "npm run eslint && npm run tscheck && npm run t",
