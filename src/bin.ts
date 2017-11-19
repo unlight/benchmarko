@@ -3,7 +3,7 @@ const VERSION = require('../package.json').version;
 
 const argv = require('yargs')
     .usage('Usage: $0 -f <file> -r <revisions>')
-    // .example('benchmarko -f benchmarks/string-concat')
+    // .example('benchmarko -f benchmarks/string')
     .option('f', {
         alias: 'file',
         describe: 'Path to file which return test function',

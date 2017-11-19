@@ -2,8 +2,8 @@
   "name": "benchmarko",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Describe your project",
-  "main": "lib/index.js",
+  "description": "Run benchmark between revisions",
+  "bin": "lib/bin.js",
   "typings": "src/index.ts",
   "scripts": {
     "test": "npm run eslint && npm run tscheck && npm run t",
@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "benchmarkify": "^2.1.0",
-    "tslib": "^1.8.0"
+    "tslib": "^1.8.0",
+    "yargs": "^10.0.3"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.44",

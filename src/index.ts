@@ -25,9 +25,11 @@ export async function main({ revisions, file }: MainOptions) {
         }
         suite.add(name, testFn);
     });
+    const [test] = suite.tests.slice(-1);
+    test.reference = true;
     suite
         .run()
         .then((results: RunResult) => {
-            console.log("results", results);
+            // console.log("results", results);
         });
 }
