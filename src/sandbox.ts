@@ -6,7 +6,7 @@ import { SpawnOptions } from 'child_process';
 export async function sandbox(n: number, revision: string) {
     const directory = `~benchmarko.sandbox/${n}`;
     const cwd = `${process.cwd()}/${directory}`;
-    const spawnOptions: SpawnOptions = { stdio: 'inherit' };
+    const spawnOptions: SpawnOptions = { };
     if (!existsSync(directory)) {
         await pspawn('git', ['clone', '.', directory]);
     } else {

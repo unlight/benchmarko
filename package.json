@@ -12,6 +12,7 @@
     "mocha": "ts-node -F node_modules/mocha/bin/_mocha",
     "test:w": "npm run mocha -- --watch-extensions ts --watch src/**/*.spec.ts",
     "test:d": "node --inspect-brk node_modules/ts-node/dist/_bin.js -F node_modules/mocha/bin/_mocha --no-timeouts src/**/*.spec.ts",
+    "example": "ts-node -F src/bin -f src/example/string",
     "tscheck": "echo tscheck... && tsc --noEmit",
     "tscheck:w": "npm run tscheck -- --watch",
     "tsclint": "tsc --noEmit --pretty false --strictNullChecks --forceConsistentCasingInFileNames --noImplicitReturns --noImplicitThis --noUnusedLocals --noUnusedParameters",
