@@ -14,7 +14,7 @@ export async function main({ revisions, file }: MainOptions) {
     const sandboxes = await Promise.all(revisions.map((revision, n) => sandbox(n, revision)));
     const name = revisions.join(' vs ');
     const benchmark = new Benchmarkify(name);
-    const suite = benchmark.createSuite(name);
+    const suite = benchmark.createSuite(`${name}, ${file}`);
     sandboxes.map(sandbox => {
         let name = sandbox.revision;
         const testFn = require(`${sandbox.directory}/${file}`);
