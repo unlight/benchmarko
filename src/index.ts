@@ -18,11 +18,16 @@ export async function main({ revisions, file }: MainOptions) {
     const benchmark = new Benchmarkify(name);
     const suite = benchmark.createSuite(name);
     sandboxes.map(sandbox => {
+        let name = sandbox.revision;
         const testFn = require(`${sandbox.directory}/${file}`);
-        suite.add(sandbox.revision, testFn);
+        if (testFn.name) {
+            name += ` (${testFn.name})`;
+        }
+        suite.add(name, testFn);
     });
     suite
         .run()
-        .then((results: RunResult )=> {
+        .then((results: RunResult) => {
+            console.log("results", results);
         });
 }
