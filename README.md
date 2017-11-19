@@ -22,3 +22,8 @@ Options:
 CHANGELOG
 ---
 See changes in [CHANGELOG.md](CHANGELOG.md) file.
+
+TODO
+---
+* Setting threshold
+* Skip error throw

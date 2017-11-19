@@ -1,5 +1,5 @@
 import { sandbox } from './sandbox';
-import { RunResult } from './benchmarkify';
+import { RunResult, IStat } from './benchmarkify';
 const Benchmarkify = require('benchmarkify');
 
 type MainOptions = {
@@ -23,11 +23,12 @@ export async function main({ revisions, file }: MainOptions) {
         }
         suite.add(name, testFn);
     });
-    const [test] = suite.tests.slice(-1);
-    test.reference = true;
-    suite
-        .run()
-        .then((results: RunResult) => {
-            // console.log("results", results);
-        });
+    const [referenceTest] = suite.tests.slice(-1);
+    referenceTest.reference = true;
+    const [headTest] = suite.tests.slice(0, 1);
+    const results: RunResult = await suite.run();
+    const stat: IStat = headTest.stat;
+    if (stat.percent <= 0 && (-stat.percent) > 10) {
+        throw new Error(`Performance hit ${(-stat.percent).toFixed(2)}%`);
+    }
 }

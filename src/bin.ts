@@ -21,4 +21,10 @@ const argv = require('yargs')
     .alias('v', 'version')
     .argv;
 
-main(argv);
+(async () => {
+    try {
+        await main(argv);
+    } catch (err) {
+        console.error(err);
+    }
+})();
