@@ -25,6 +25,6 @@ const argv = require('yargs')
     try {
         await main(argv);
     } catch (err) {
-        console.error(err);
+        console.error(err); // eslint-disable-line no-console
     }
 })();
