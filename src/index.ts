@@ -1,5 +1,3 @@
-import { spawn, spawnSync, SpawnOptions } from 'child_process';
-import { resolve } from 'path';
 import { sandbox } from './sandbox';
 import { RunResult } from './benchmarkify';
 const Benchmarkify = require('benchmarkify');
@@ -7,7 +5,7 @@ const Benchmarkify = require('benchmarkify');
 type MainOptions = {
     revisions: string[];
     file: string;
-}
+};
 
 export async function main({ revisions, file }: MainOptions) {
     if (revisions.length <= 1) {

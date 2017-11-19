@@ -1,4 +1,4 @@
-export interface Stat {
+export interface IStat {
     duration: number;
     cycle: number;
     count: number;
@@ -7,11 +7,11 @@ export interface Stat {
     percent: number;
 }
 
-export interface ResultObject {
+export interface IResultObject {
     name: string;
     reference?: boolean;
     fastest?: boolean;
-    stat: Stat;
+    stat: IStat;
 }
 
-export type RunResult = ResultObject[];
+export type RunResult = IResultObject[];

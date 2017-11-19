@@ -1,5 +1,4 @@
 import { pspawn } from './pspawn';
-import { promisify } from 'util';
 import { existsSync } from 'fs';
 import { SpawnOptions } from 'child_process';
 
