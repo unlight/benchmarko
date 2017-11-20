@@ -67,7 +67,7 @@
     "url": "http://github.com/unlight/benchmarko.git"
   },
   "keywords": [
-    "starter"
+    "benchmark"
   ],
   "config": {
     "commitizen": {
