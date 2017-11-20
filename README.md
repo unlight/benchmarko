@@ -27,3 +27,5 @@ TODO
 ---
 * Setting threshold
 * Skip error throw
+* Attach by reflect metadata
+* --tags

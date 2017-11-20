@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { main } from './index';
 const { version } = require('../package.json');
 
